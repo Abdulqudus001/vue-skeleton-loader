@@ -45,9 +45,13 @@ Then you can use the component in your template
 ## References
 
 Types: circle, text, rect
+
 Animations: fade, wave, pulse, pulse-x, pulse-y
+
 Size: Overwrites the width and height with the provided value
+
 Width: Sets width of loader
+
 Height: Sets height of the loader
 
 ## Project setup
