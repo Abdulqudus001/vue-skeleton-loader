@@ -14,7 +14,7 @@
     "progressive",
     "skeleton-ui"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/abdulqudus001/vue-skeleton-loader"
