@@ -12,7 +12,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <skeleton-loader-vue-sample />
+    <skeleton-loader-vue-sample type="circle" />
     <!-- <skeleton-loader-vue-sample type="text" height="12" width="250" rounded radius="8" color="red" /> -->
   </div>
 </template>
