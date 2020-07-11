@@ -51,7 +51,16 @@ export default {
 
 This would give create a circle having a width and heigth of 200px and an animation of fade.
 
-## References
+## API
+
+### Props
+
+|Prop|Type|Default|Options|Description|
+|---|---|---|---|---|
+|width|number, string|200||The is the width of the loader, and can be either a number or string. This property would be overridden if the `size` props is set|
+|height|number, string|100||The is the height of the loader, and can be either a number or string. This property would be overridden if the `size` props is set|
+|type|string|'rect'|rect, circle|This is the type of the loader. It could be circle or rectangle shaped|
+|animation|string|'wave'|fade, wave, pulse, pulse-x, pulse-y|The animation to be applied to the loader|
 
 Types: circle, text, rect
 
