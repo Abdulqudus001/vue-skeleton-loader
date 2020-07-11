@@ -1,6 +1,7 @@
 # skeleton-loader-vue
 
-> Loader showing skeleton view while data is being loaded to improve UX
+> Loader showing skeleton view while data is being loaded to improve UX.
+
 ![Sample loader](https://res.cloudinary.com/ibnabubakre/image/upload/v1594505356/loader.gif)
 
 ---
