@@ -1,5 +1,5 @@
 // Import vue components
-import component from './lib-components/Loader.vue';
+import component from './components/Loader.vue';
 
 // install function executed by Vue.use()
 const install = function installSkeletonLoaderVue(Vue) {

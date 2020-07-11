@@ -70,6 +70,7 @@ export default {
 
 <style>
 .loader {
+  width: fit-content;
   cursor: wait;
 }
 
