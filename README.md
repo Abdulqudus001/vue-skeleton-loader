@@ -66,39 +66,23 @@ This would give create a circle having a width and heigth of 200px and an animat
 |rounded|boolean|false||Add this prop to give a non-circle loader a border-radius 0f 8px|
 |radius|number,string|8||This is used to determine the border radius of the loader|
 
-Types: circle, text, rect
-
-Animations: fade, wave, pulse, pulse-x, pulse-y
-
-Size: Overwrites the width and height with the provided value
-
-Width: Sets width of loader
-
-Height: Sets height of the loader
 
 ## Project setup
 
-```shell
-yarn install
-```
+### Install dependencies
 
-### Compiles and hot-reloads for development
+* npm: `npm install`
+* yarn: `yarn`
 
-```shell
-yarn serve
-```
+### Start Dev Server
+
+* npm: `npm run serve`
+* yarn: `yarn serve`
 
 ### Compiles and minifies for production
 
-```shell
-yarn build
-```
-
-### Lints and fixes files
-
-```shell
-yarn lint
-```
+* npm: `npm run build`
+* yarn: `yarn build`
 
 ### Customize configuration
 
