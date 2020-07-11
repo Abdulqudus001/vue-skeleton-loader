@@ -1,28 +1,34 @@
 # skeleton-loader-vue
 
-## Install
+> Loader showing skeleton view while data is being loaded to improve UX
+![Sample loader](https://res.cloudinary.com/ibnabubakre/image/upload/v1594505356/loader.gif)
 
-npm
+---
 
-```shell
-npm install skeleton-loader-vue --save
+## :cd: Install
+
+* npm: `npm install skeleton-loader-vue --save`
+* yarn: `yarn add skeleton-loader-vue`
+
+## :rocket: Usage
+You can import and register the component globally in your main.js, or import and use it in a particular component.
+
+**To register in your `main.js`**
+```javascript
+import Vue from 'vue';
+// Import the component
+import VueSkeletonLoader from 'skeleton-loader-vue';
+
+// Register the component globally
+Vue.component('vue-skeleton-loader', VueSkeletonLoader);
 ```
 
-yarn
-
-```shell
-yarn add skeleton-loader-vue
-```
-
-## Usage
-
-In your vue component, import the vue skeleton loader
-
+**To register in your component**
 ```vue
 <script>
-import SkeletonLoaderVue from 'skeleton-loader-vue'
+import VueSkeletonLoader from 'skeleton-loader-vue'
 export default {
-  components: { SkeletonLoaderVue },
+  components: { VueSkeletonLoader },
 };
 </script>
 ```
