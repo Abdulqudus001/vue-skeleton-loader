@@ -6,7 +6,7 @@
 
 ---
 
-## :cd: Install
+## :cd: Installation
 
 * npm: `npm install skeleton-loader-vue --save`
 * yarn: `yarn add skeleton-loader-vue`
@@ -27,18 +27,18 @@ Vue.component('vue-skeleton-loader', VueSkeletonLoader);
 **To register in your component**
 ```vue
 <script>
-import VueSkeletonLoader from 'skeleton-loader-vue'
+import VueSkeletonLoader from 'skeleton-loader-vue';
 export default {
   components: { VueSkeletonLoader },
 };
 </script>
 ```
 
-Then you can use the component in your template
+**Using loader in your `.vue` file**
 
 ```vue
 <template>
-  <div>
+  <div class="facebook-card">
     <skeleton-loader-vue
       type="circle"
       :width="200"
@@ -48,6 +48,8 @@ Then you can use the component in your template
   </div>
 </template>
 ```
+
+This would give create a circle having a width and heigth of 200px and an animation of fade.
 
 ## References
 

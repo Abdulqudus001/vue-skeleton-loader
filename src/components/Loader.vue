@@ -5,6 +5,7 @@
       :width="loaderWidth"
       :height="loaderHeight"
       :animation="animation"
+      :color="color"
     />
     <square-loader
       v-else
@@ -12,6 +13,7 @@
       :height="loaderHeight"
       :animation="animation"
       :type="type"
+      :color="color"
     />
   </div>
 </template>
