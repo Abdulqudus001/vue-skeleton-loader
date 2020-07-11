@@ -7,11 +7,11 @@ export default {
   props: {
     height: {
       type: [Number, String],
-      // default: 100
+      default: 100
     },
     width: {
       type: [Number, String],
-      // default: 100
+      default: 200
     },
     color: {
       type: String,
@@ -24,14 +24,27 @@ export default {
     type: {
       type: String,
       default: 'rect',
+    },
+    rounded: {
+      type: Boolean,
+      default: false,
+    },
+    radius: {
+      type: [Number, String],
+      default: 0,
     }
   },
   computed: {
     style() {
-      return `width: ${this.width}px; height: ${this.height}px; background-color: ${this.color}`;
+      return {
+        width: `${this.width}px`,
+        height: `${this.height}px`,
+        'background-color': `${this.color}`,
+        'border-radius': this.rounded ? `${this.radius}px` : 0
+      }
     },
     bindClass() {
-      return `animation--${this.animation} shape--${this.type}`;
+      return `animation--${this.animation} shape--${this.type} shape--${this.rounded ? 'round': 'flat'}`;
     },
   }
 };
@@ -57,8 +70,10 @@ export default {
 
 /* Shape stylings */
 .shape--text {
-  border-radius: 8px;
-  width: 100%;
   height: 20px;
+}
+
+.shape--round {
+  border-radius: 8px;
 }
 </style>

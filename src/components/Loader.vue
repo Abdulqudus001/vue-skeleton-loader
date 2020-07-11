@@ -14,6 +14,8 @@
       :animation="animation"
       :type="type"
       :color="color"
+      :rounded="rounded"
+      :radius="radius"
     />
   </div>
 </template>
@@ -25,7 +27,7 @@ import SquareLoader from './Straight.vue';
 export default {
   components: {
     CircleLoader,
-    SquareLoader
+    SquareLoader,
   },
 
   props: {
@@ -48,8 +50,16 @@ export default {
     },
     color: {
       type: String,
-      default: 'rgba(0, 0, 0, 0.12)'
+      default: 'rgba(0, 0, 0, 0.12)',
     },
+    rounded: {
+      type: Boolean,
+      default: false,
+    },
+    radius: {
+      type: [Number, String],
+      default: 8,
+    }
   },
   computed: {
     loaderWidth() {

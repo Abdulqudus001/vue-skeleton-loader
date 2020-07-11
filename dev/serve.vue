@@ -1,6 +1,6 @@
 <script>
 import Vue from 'vue';
-import { SkeletonLoaderVueSample } from '@/entry';
+import SkeletonLoaderVueSample from '@/entry';
 
 export default Vue.extend({
   name: 'ServeDev',
@@ -12,6 +12,6 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <skeleton-loader-vue-sample />
+    <skeleton-loader-vue-sample type="text" height="12" width="250" rounded radius="8" color="red" />
   </div>
 </template>
