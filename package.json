@@ -1,11 +1,28 @@
 {
   "name": "skeleton-loader-vue",
   "version": "1.0.3",
-  "description": "A Basic skeleton loadeer for your vue app",
+  "description": "A simple, customizable skeleton loader for your vue app",
+  "author": "Abdulqudus Abubakre <abdulqudusabubakre@gmail.com> (http://github.com/abdulqudus001)",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "plugin",
+    "loader",
+    "fake",
+    "skeleton-loader",
+    "placeholder",
+    "progressive",
+    "skeleton-ui"
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/abdulqudus001/vue-skeleton-loader"
   },
+  "bugs": {
+    "url": "https://github.com/abdulqudus001/vue-skeleton-loader/issues"
+  },
+  "homepage": "https://github.com/abdulqudus001/vue-skeleton-loader#readme",
   "main": "dist/skeleton-loader-vue.ssr.js",
   "browser": "dist/skeleton-loader-vue.esm.js",
   "module": "dist/skeleton-loader-vue.esm.js",
