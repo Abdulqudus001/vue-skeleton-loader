@@ -1,5 +1,5 @@
 <template>
-  <div class="loader" :style="style" :class="bindClass"></div>
+  <div :style="style" :class="bindClass"></div>
 </template>
 
 <script>
@@ -37,8 +37,8 @@ export default {
   computed: {
     style() {
       return {
-        width: `${this.width}px`,
-        height: `${this.height}px`,
+        width:  typeof this.width === 'number' ? `${this.width}px` : this.width,
+        height: typeof this.width === 'number' ? `${this.height}px` : this.height,
         'background-color': `${this.color}`,
         'border-radius': this.rounded ? `${this.radius}px` : 0
       }
