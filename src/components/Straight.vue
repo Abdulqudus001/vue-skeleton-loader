@@ -1,5 +1,5 @@
 <template>
-  <div :style="style" :class="bindClass"></div>
+  <div class="loader" :style="style" :class="bindClass"></div>
 </template>
 
 <script>
