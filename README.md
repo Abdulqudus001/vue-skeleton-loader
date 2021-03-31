@@ -63,6 +63,7 @@ This would give create a circle having a width and heigth of 200px and an animat
 |type|string|'rect'|rect, circle|This is the type of the loader. It could be circle or rectangle shaped|
 |animation|string|'wave'|fade, wave, pulse, pulse-x, pulse-y|The animation to be applied to the loader|
 |color|string|rgba(0,0,0,0.12)||The sets the color of the loader. It accepts all valid CSS colors (rgb, hsl, hex included)|
+|wave-color|string|rgba(0,0,0,0.12)||The sets the color of the wave. It accepts all valid CSS colors (rgb, hsl, hex included)|
 |rounded|boolean|false||Add this prop to give a non-circle loader a border-radius 0f 8px|
 |radius|number,string|8||This is used to determine the border radius of the loader|
 
