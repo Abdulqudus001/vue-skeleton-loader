@@ -1,5 +1,5 @@
 <template>
-  <div class="loader" :style="style" :class="bindClass"></div>
+  <div class="loader" :class="bindClass"></div>
 </template>
 
 <script>
@@ -46,6 +46,18 @@ export default {
     bindClass() {
       return `animation--${this.animation} shape--${this.type} shape--${this.rounded ? 'round': 'flat'}`;
     },
+  },
+  mounted () {
+    const width =  typeof this.width === 'number' ? `${this.width}px` : this.width;
+    const height = typeof this.width === 'number' ? `${this.height}px` : this.height;
+    const background = `${this.color}`;
+    const borderRadius = this.rounded ? `${this.radius}px` : 0;
+
+    const loader = this.$el;
+    loader.style.setProperty('width', width);
+    loader.style.setProperty('height', height);
+    loader.style.setProperty('background-color', background);
+    loader.style.setProperty('border-radius', borderRadius);
   }
 };
 </script>

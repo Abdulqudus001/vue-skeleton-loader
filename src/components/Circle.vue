@@ -1,5 +1,5 @@
 <template>
-  <div class="circle-loader" :style="style" :class="bindClass"></div>
+  <div class="loader loader--circle" :class="bindClass"></div>
 </template>
 
 <script>
@@ -23,18 +23,25 @@ export default {
     }
   },
   computed: {
-    style() {
-      return `width: ${this.width}px; height: ${this.height}px; background-color: ${this.color}`;
-    },
     bindClass() {
       return `animation--${this.animation}`;
     },
+  },
+  mounted () {
+    const width =  typeof this.width === 'number' ? `${this.width}px` : this.width;
+    const height = typeof this.width === 'number' ? `${this.height}px` : this.height;
+    const background = `${this.color}`;
+
+    const loader = this.$el;
+    loader.style.setProperty('width', width);
+    loader.style.setProperty('height', height);
+    loader.style.setProperty('background-color', background);
   }
 };
 </script>
 
 <style scoped>
-.circle-loader {
+.loader--circle {
   overflow: hidden;
   width: 100px;
   height: 100px;
@@ -43,7 +50,7 @@ export default {
   position: relative;
 }
 
-.circle-loader::before {
+.loader--circle::before {
   content: "";
   display: block;
   position: absolute;

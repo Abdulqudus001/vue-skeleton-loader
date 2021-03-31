@@ -1,23 +1,21 @@
 <template>
-  <div class="loader">
-    <circle-loader
-      v-if="type === 'circle'"
-      :width="loaderWidth"
-      :height="loaderHeight"
-      :animation="animation"
-      :color="color"
-    />
-    <square-loader
-      v-else
-      :width="loaderWidth"
-      :height="loaderHeight"
-      :animation="animation"
-      :type="type"
-      :color="color"
-      :rounded="rounded"
-      :radius="radius"
-    />
-  </div>
+  <circle-loader
+    v-if="type === 'circle'"
+    :width="loaderWidth"
+    :height="loaderHeight"
+    :animation="animation"
+    :color="color"
+  />
+  <square-loader
+    v-else
+    :width="loaderWidth"
+    :height="loaderHeight"
+    :animation="animation"
+    :type="type"
+    :color="color"
+    :rounded="rounded"
+    :radius="radius"
+  />
 </template>
 
 <script>
@@ -52,6 +50,9 @@ export default {
       type: String,
       default: 'rgba(0, 0, 0, 0.12)',
     },
+    waveColor: {
+      type: String,
+    },
     rounded: {
       type: Boolean,
       default: false,
@@ -75,8 +76,13 @@ export default {
       } else {
         return this.height;
       }
-    },
+    }
   },
+  mounted() {
+    if (this.waveColor) {
+      this.$el.style.setProperty('--gradient-color', this.waveColor);
+    }
+  }
 };
 </script>
 
@@ -84,6 +90,7 @@ export default {
 .loader {
   width: fit-content;
   cursor: wait;
+  --gradient-color: rgba(255, 255, 255, 0.5)
 }
 
 /* Animation definitions */
@@ -154,6 +161,12 @@ export default {
     90deg,
     transparent,
     rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gradient-color),
     transparent
   );
   animation: wave 1.5s linear .5s infinite;
