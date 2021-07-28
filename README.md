@@ -39,7 +39,7 @@ export default {
 ```vue
 <template>
   <div class="facebook-card">
-    <skeleton-loader-vue
+    <vue-skeleton-loader
       type="circle"
       :width="200"
       :height="200"
