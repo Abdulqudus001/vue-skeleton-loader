@@ -35,14 +35,6 @@ export default {
     }
   },
   computed: {
-    style() {
-      return {
-        width:  typeof this.width === 'number' ? `${this.width}px` : this.width,
-        height: typeof this.width === 'number' ? `${this.height}px` : this.height,
-        'background-color': `${this.color}`,
-        'border-radius': this.rounded ? `${this.radius}px` : 0
-      }
-    },
     bindClass() {
       return `animation--${this.animation} shape--${this.type} shape--${this.rounded ? 'round': 'flat'}`;
     },
