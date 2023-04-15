@@ -1,5 +1,5 @@
 <template>
-  <div class="loader loader--circle" :class="bindClass"></div>
+  <div class="loader loader--circle" :class="bindClass" :style="style"></div>
 </template>
 
 <script>
@@ -26,16 +26,13 @@ export default {
     bindClass() {
       return `animation--${this.animation}`;
     },
-  },
-  mounted () {
-    const width =  typeof this.width === 'number' ? `${this.width}px` : this.width;
-    const height = typeof this.width === 'number' ? `${this.height}px` : this.height;
-    const background = `${this.color}`;
-
-    const loader = this.$el;
-    loader.style.setProperty('width', width);
-    loader.style.setProperty('height', height);
-    loader.style.setProperty('background-color', background);
+    style() {
+      return {
+        backgroundColor: this.color,
+        width: typeof this.width === 'number' ? `${this.width}px` : this.width,
+        height: typeof this.height === 'number' ? `${this.height}px` : this.height,
+      }
+    }
   }
 };
 </script>
